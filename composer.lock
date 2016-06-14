@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "773028367047e70bf6841dbceaceff54",
-    "content-hash": "9892220ec90390a318ac0ebee2ed95e9",
+    "hash": "465ec06947e1aa527aba0a533b15b2cf",
+    "content-hash": "ac285201a0a57aed10bdd365ccbd4f2b",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -809,32 +809,35 @@
         },
         {
             "name": "drupal/admin_toolbar",
-            "version": "1.13.0",
+            "version": "8.1.11",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/admin_toolbar",
-                "reference": "8.x-1.13"
+                "url": "https://git.drupal.org/project/admin_toolbar.git",
+                "reference": "4ffa123d545305870741a8cd5ce554906135bfeb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-8.x-1.13.zip",
+                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-8.x-1.11.zip",
                 "reference": null,
-                "shasum": "74d58568dfd18e31a05ec7c3cfc073b5f3b3a3f3"
+                "shasum": null
             },
             "require": {
-                "drupal/core": "*"
+                "drupal/core": "8.*",
+                "drupal/toolbar": "8.*"
+            },
+            "replace": {
+                "drupal/admin_toolbar_tools": "self.version"
+            },
+            "suggest": {
+                "drupal/core": "Required by drupal/admin_toolbar_tools"
             },
             "type": "drupal-module",
             "extra": {
                 "branch-alias": {
-                    "dev-1.13.x": "1.13.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.13",
-                    "datestamp": "1454942939"
+                    "dev-8.x-1.x": "8.1.x-dev"
                 }
             },
-            "notification-url": "https://packages.drupal.org/8/downloads",
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
@@ -844,11 +847,9 @@
                     "homepage": "https://www.drupal.org/u/matio89"
                 }
             ],
-            "description": "Admin Toolbar improve the default Drupal Toolbar, it lets the hover of sub menus.",
+            "description": "Admin Toolbar improve the default Drupal Toolbar,it lets the hover of sub menus.",
             "homepage": "http://drupal.org/project/admin_toolbar",
-            "support": {
-                "issues": "https://www.drupal.org/project/issues/admin_toolbar"
-            }
+            "time": "2015-12-11 08:22:06"
         },
         {
             "name": "drupal/console",
@@ -1105,240 +1106,102 @@
         },
         {
             "name": "drupal/ctools",
-            "version": "3.0.0-alpha24",
+            "version": "8.3.0-alpha23",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/ctools",
-                "reference": "8.x-3.0-alpha24"
+                "reference": "1eb136e1989b79283d9af8a0a2781ec6a9a3c866"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ctools-8.x-3.0-alpha24.zip",
+                "url": "https://ftp.drupal.org/files/projects/ctools-8.x-3.0-alpha23.zip",
                 "reference": null,
-                "shasum": "119f53df770d53afa500bd34e0f60a092fb6faa0"
+                "shasum": null
             },
             "require": {
-                "drupal/core": "~8.0"
+                "drupal/core": "8.*"
+            },
+            "replace": {
+                "drupal/ctools_block": "self.version",
+                "drupal/ctools_views": "self.version"
             },
             "suggest": {
-                "drupal/drupal": "Required by drupal/ctools_views"
+                "drupal/block": "Required by drupal/ctools_views",
+                "drupal/core": "Required by drupal/ctools_block, drupal/ctools_views",
+                "drupal/views": "Required by drupal/ctools_views"
             },
             "type": "drupal-module",
             "extra": {
                 "branch-alias": {
-                    "dev-3.0.x": "3.0.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-3.0-alpha24",
-                    "datestamp": "1459542839"
+                    "dev-8.x-3.x": "8.3.x-dev"
                 }
             },
-            "notification-url": "https://packages.drupal.org/8/downloads",
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
             "license": [
                 "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "EclipseGc",
-                    "homepage": "https://www.drupal.org/user/61203"
-                },
-                {
-                    "name": "damiankloip",
-                    "homepage": "https://www.drupal.org/user/1037976"
-                },
-                {
-                    "name": "dawehner",
-                    "homepage": "https://www.drupal.org/user/99340"
-                },
-                {
-                    "name": "esmerel",
-                    "homepage": "https://www.drupal.org/user/164022"
-                },
-                {
-                    "name": "japerry",
-                    "homepage": "https://www.drupal.org/user/45640"
-                },
-                {
-                    "name": "merlinofchaos",
-                    "homepage": "https://www.drupal.org/user/26979"
-                },
-                {
-                    "name": "neclimdul",
-                    "homepage": "https://www.drupal.org/user/48673"
-                },
-                {
-                    "name": "sdboyer",
-                    "homepage": "https://www.drupal.org/user/146719"
-                },
-                {
-                    "name": "sun",
-                    "homepage": "https://www.drupal.org/user/54136"
-                },
-                {
-                    "name": "tim.plunkett",
-                    "homepage": "https://www.drupal.org/user/241634"
-                }
             ],
             "description": "Provides a number of utility and helper APIs for Drupal developers and site builders.",
             "homepage": "https://www.drupal.org/project/ctools",
-            "support": {
-                "source": "https://www.drupal.org/project/ctools"
-            }
+            "time": "2016-02-05 19:52:56"
         },
         {
             "name": "drupal/dropguard",
-            "version": "dev-1.0.x",
+            "version": "dev-8.x-1.x",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/dropguard",
+                "url": "https://git.drupal.org/project/dropguard.git",
                 "reference": "a3ad697f58482d65b5b6ff430f415cd7e958ae7f"
             },
             "require": {
-                "drupal/core": "~8.0"
+                "drupal/core": "8.*"
             },
             "type": "drupal-module",
             "extra": {
                 "branch-alias": {
-                    "dev-1.0.x": "1.0.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0+0-dev",
-                    "datestamp": "1464782039"
+                    "dev-8.x-1.x": "8.1.x-dev"
                 }
             },
-            "notification-url": "https://packages.drupal.org/8/downloads",
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
             "license": [
                 "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "manuelBS",
-                    "homepage": "https://www.drupal.org/user/302791"
-                },
-                {
-                    "name": "meramo",
-                    "homepage": "https://www.drupal.org/user/192314"
-                },
-                {
-                    "name": "weidauer",
-                    "homepage": "https://www.drupal.org/user/2679425"
-                }
             ],
             "description": "Provides integration with the Drop Guard service to automate Drupal updates.",
             "homepage": "http://drupal.org/project/dropguard",
             "keywords": [
                 "Drupal"
             ],
-            "support": {
-                "issues": "http://drupal.org/project/issues/dropguard",
-                "source": "http://cgit.drupalcode.org/dropguard"
-            },
             "time": "2016-06-01 11:49:19"
         },
         {
-            "name": "drupal/rules",
-            "version": "dev-3.0.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/rules",
-                "reference": "ca6532e87c26860df61369c5729fa08c28273bad"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-3.0.x": "3.0.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-3.0-alpha1+16-dev",
-                    "datestamp": "1465398164"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "fago",
-                    "homepage": "https://www.drupal.org/user/16747"
-                },
-                {
-                    "name": "klausi",
-                    "homepage": "https://www.drupal.org/user/262198"
-                }
-            ],
-            "description": "React on events and conditionally evaluate actions.",
-            "homepage": "https://www.drupal.org/project/rules",
-            "support": {
-                "source": "https://www.drupal.org/project/rules"
-            },
-            "time": "2016-06-08 14:28:45"
-        },
-        {
             "name": "drupal/token",
-            "version": "1.0.0-alpha1",
+            "version": "8.1.0-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/token",
-                "reference": "8.x-1.0-alpha1"
+                "reference": "744aafa22afeb5abdbd300179ae7299263f20c5a"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/token-8.x-1.0-alpha1.zip",
                 "reference": null,
-                "shasum": "d3f7190ebfee7928af295dbe65b6788a6f90e22b"
+                "shasum": null
             },
             "require": {
-                "drupal/core": "~8.0"
+                "drupal/core": "8.*"
             },
             "type": "drupal-module",
             "extra": {
                 "branch-alias": {
-                    "dev-1.0.x": "1.0.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-alpha1",
-                    "datestamp": "1453363739"
+                    "dev-8.x-1.x": "8.1.x-dev"
                 }
             },
-            "notification-url": "https://packages.drupal.org/8/downloads",
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
-            "authors": [
-                {
-                    "name": "Berdir",
-                    "homepage": "https://www.drupal.org/user/214652"
-                },
-                {
-                    "name": "Dave Reid",
-                    "homepage": "https://www.drupal.org/user/53892"
-                },
-                {
-                    "name": "eaton",
-                    "homepage": "https://www.drupal.org/user/16496"
-                },
-                {
-                    "name": "fago",
-                    "homepage": "https://www.drupal.org/user/16747"
-                },
-                {
-                    "name": "greggles",
-                    "homepage": "https://www.drupal.org/user/36762"
-                },
-                {
-                    "name": "mikeryan",
-                    "homepage": "https://www.drupal.org/user/4420"
-                }
-            ],
             "description": "Provides a user interface for the Token API and some missing core tokens.",
             "homepage": "https://www.drupal.org/project/token",
-            "support": {
-                "issues": "https://www.drupal.org/project/issues/token"
-            }
+            "time": "2015-12-23 08:08:43"
         },
         {
             "name": "drush/drush",
@@ -6120,7 +5983,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/rules": 20,
         "drupal/dropguard": 20,
         "jcalderonzumba/gastonjs": 20
     },
