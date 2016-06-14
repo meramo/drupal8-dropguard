@@ -1,0 +1,5 @@
+name: A custom block example
+type: module
+description: Custom Block Example
+core: 8.x
+package: Custom

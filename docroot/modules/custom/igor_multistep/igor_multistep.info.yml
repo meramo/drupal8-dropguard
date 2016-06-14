@@ -1,0 +1,5 @@
+name: Custom Multistep Form
+type: module
+description: Builds a multistep form
+core: 8.x
+package: Custom

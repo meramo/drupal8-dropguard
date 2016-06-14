@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains igor_customblock.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function igor_customblock_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the igor_customblock module.
+    case 'help.page.igor_customblock':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom Block Example') . '</p>';
+      return $output;
+
+    default:
+  }
+}
