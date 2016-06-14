@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d21062eee92ddccbc322aa74c8da45c9",
-    "content-hash": "6a2bd63c05bf767c6cb428c449a7d454",
+    "hash": "f7a89315dbcf22aacac8a5f62235b9e5",
+    "content-hash": "87a839dafc6f244ce73e6284b50e5d0f",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1059,6 +1059,180 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "time": "2016-06-01 23:31:24"
+        },
+        {
+            "name": "drupal/ctools",
+            "version": "3.0.0-alpha24",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/ctools",
+                "reference": "8.x-3.0-alpha24"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ctools-8.x-3.0-alpha24.zip",
+                "reference": null,
+                "shasum": "119f53df770d53afa500bd34e0f60a092fb6faa0"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "suggest": {
+                "drupal/drupal": "Required by drupal/ctools_views"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.0.x": "3.0.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.0-alpha24",
+                    "datestamp": "1459542839"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "EclipseGc",
+                    "homepage": "https://www.drupal.org/user/61203"
+                },
+                {
+                    "name": "damiankloip",
+                    "homepage": "https://www.drupal.org/user/1037976"
+                },
+                {
+                    "name": "dawehner",
+                    "homepage": "https://www.drupal.org/user/99340"
+                },
+                {
+                    "name": "esmerel",
+                    "homepage": "https://www.drupal.org/user/164022"
+                },
+                {
+                    "name": "japerry",
+                    "homepage": "https://www.drupal.org/user/45640"
+                },
+                {
+                    "name": "merlinofchaos",
+                    "homepage": "https://www.drupal.org/user/26979"
+                },
+                {
+                    "name": "neclimdul",
+                    "homepage": "https://www.drupal.org/user/48673"
+                },
+                {
+                    "name": "sdboyer",
+                    "homepage": "https://www.drupal.org/user/146719"
+                },
+                {
+                    "name": "sun",
+                    "homepage": "https://www.drupal.org/user/54136"
+                },
+                {
+                    "name": "tim.plunkett",
+                    "homepage": "https://www.drupal.org/user/241634"
+                }
+            ],
+            "description": "Provides a number of utility and helper APIs for Drupal developers and site builders.",
+            "homepage": "https://www.drupal.org/project/ctools",
+            "support": {
+                "source": "https://www.drupal.org/project/ctools"
+            }
+        },
+        {
+            "name": "drupal/dropguard",
+            "version": "dev-1.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/dropguard",
+                "reference": "a3ad697f58482d65b5b6ff430f415cd7e958ae7f"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.0.x": "1.0.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0+0-dev",
+                    "datestamp": "1464782039"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "manuelBS",
+                    "homepage": "https://www.drupal.org/user/302791"
+                },
+                {
+                    "name": "meramo",
+                    "homepage": "https://www.drupal.org/user/192314"
+                },
+                {
+                    "name": "weidauer",
+                    "homepage": "https://www.drupal.org/user/2679425"
+                }
+            ],
+            "description": "Provides integration with the Drop Guard service to automate Drupal updates.",
+            "homepage": "http://drupal.org/project/dropguard",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "issues": "http://drupal.org/project/issues/dropguard",
+                "source": "http://cgit.drupalcode.org/dropguard"
+            },
+            "time": "2016-06-01 11:49:19"
+        },
+        {
+            "name": "drupal/rules",
+            "version": "dev-3.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/rules",
+                "reference": "ca6532e87c26860df61369c5729fa08c28273bad"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.0.x": "3.0.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.0-alpha1+16-dev",
+                    "datestamp": "1465398164"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "fago",
+                    "homepage": "https://www.drupal.org/user/16747"
+                },
+                {
+                    "name": "klausi",
+                    "homepage": "https://www.drupal.org/user/262198"
+                }
+            ],
+            "description": "React on events and conditionally evaluate actions.",
+            "homepage": "https://www.drupal.org/project/rules",
+            "support": {
+                "source": "https://www.drupal.org/project/rules"
+            },
+            "time": "2016-06-08 14:28:45"
         },
         {
             "name": "drush/drush",
@@ -5840,6 +6014,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/rules": 20,
+        "drupal/dropguard": 20,
         "jcalderonzumba/gastonjs": 20
     },
     "prefer-stable": true,
