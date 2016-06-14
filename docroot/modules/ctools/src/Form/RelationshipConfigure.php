@@ -59,32 +59,32 @@ abstract class RelationshipConfigure extends FormBase {
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state, $context = NULL, $tempstore_id = NULL, $machine_name = NULL) {
+  public function buildForm(array $form, FormStateInterface $form_state, $context_id = NULL, $tempstore_id = NULL, $machine_name = NULL) {
     $this->tempstore_id = $tempstore_id;
     $this->machine_name = $machine_name;
     $cached_values = $this->tempstore->get($this->tempstore_id)->get($this->machine_name);
 
     /** @var \Drupal\Core\Plugin\Context\ContextInterface[] $contexts */
     $contexts = $this->getContexts($cached_values);
-    $context_object = $this->resolver->convertTokenToContext($context, $contexts);
+    $context_object = $this->resolver->convertTokenToContext($context_id, $contexts);
     $form['id'] = [
       '#type' => 'value',
-      '#value' => $context
+      '#value' => $context_id
     ];
     $form['context_object'] = [
       '#type' => 'value',
       '#value' => $context_object,
     ];
-    $form['context_data'] = [
-      '#type' => 'item',
-      '#title' => $this->resolver->getLabelByToken($context, $contexts),
-      '#markup' => $context_object->getContextDefinition()->getDataType(),
-    ];
     $form['label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Context label'),
-      '#default_value' => !empty($contexts[$context]) ? $contexts[$context]->getContextDefinition()->getLabel() : '',
+      '#default_value' => !empty($contexts[$context_id]) ? $contexts[$context_id]->getContextDefinition()->getLabel() : $this->resolver->getLabelByToken($context_id, $contexts),
       '#required' => TRUE,
+    ];
+    $form['context_data'] = [
+      '#type' => 'item',
+      '#title' => $this->t('Data type'),
+      '#markup' => $context_object->getContextDefinition()->getDataType(),
     ];
     $form['submit'] = [
       '#type' => 'submit',
