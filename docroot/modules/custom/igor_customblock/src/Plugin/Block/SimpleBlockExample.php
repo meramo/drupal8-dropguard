@@ -10,6 +10,9 @@
 namespace Drupal\igor_customblock\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Form\FormBuilderInterface;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Добавляем простой блок с текстом.
@@ -20,17 +23,27 @@ use Drupal\Core\Block\BlockBase;
  *   admin_label = @Translation("Simple block example"),
  * )
  */
-class SimpleBlockExample extends BlockBase {
+class SimpleBlockExample extends BlockBase implements ContainerFactoryPluginInterface {
 
-  /**
-   * {@inheritdoc}
-   */
+  protected $formBuilder;
+
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, FormBuilderInterface $formBuilder) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition);
+    $this->formBuilder = $formBuilder;
+  }
+
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new static(
+      $configuration,
+      $plugin_id,
+      $plugin_definition,
+      $container->get('form_builder')
+    );
+  }
+
   public function build() {
-    $block = [
-      '#type' => 'markup',
-      '#markup' => '<strong>Hello World!</strong>'
-    ];
-    return $block;
+    $form = $this->formBuilder->getForm('Drupal\igor_customblock\Form\ExampleForm');
+    return $form;
   }
 
 }
